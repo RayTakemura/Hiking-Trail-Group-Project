@@ -31,17 +31,21 @@ a {
     color: black;
 }
 
+ul {
+    list-style-type: none;
+}
+
 .about, main {
     background-color: white;
 }
 
 /* single trail  */
-.comments{
+.comment-section , .card-wrapper{
     background-color: var(--primary-color);
     border-radius: 10px;
 }
 
-.comment-title{
+.comment-title, .comment{
     background-color: var(--secondary-color);
     border-radius: 10px;
 }
@@ -49,6 +53,8 @@ a {
 .comment-title-text{
     font-size: 2rem;
 }
+
+
 
 /* @media  screen and (min-width: 980px) {
     .comments{
