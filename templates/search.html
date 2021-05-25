@@ -37,11 +37,11 @@
         <div class='dropdown d-flex justify-content-center pb-5'>
             <form action="/action_page.php">
                 <label for="cars">Search By:</label>
-                <select name="cars" id="cars">
+                <select name="cars" id="dropdown">
                         <option disabled>Pick one:</option>
-                        <option value="city">City</option>
-                        <option value="zip">Zip</option>
-                        <option value="name">Name</option>
+                        <option id='city' value="city">City</option>
+                        <option id='zip' value="zip">Zip</option>
+                        <option id='name' value="name">Name</option>
                 </select>
                 <br><br>
             </form>
@@ -53,7 +53,7 @@
                 <div class="form-group">
                     <input type="text" class="form-control " id="input" placeholder="Filter">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" id='submit'>Submit</button>
             </form>
         </div>
     </main>
