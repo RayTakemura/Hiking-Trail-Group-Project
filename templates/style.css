@@ -1,0 +1,40 @@
+/* header + home page */
+:root {
+    --primary-color: rgb(196, 196, 196); 
+    --secondary-color:rgb(255, 255, 255);
+    --tertiary-color: rgb(0, 255, 117);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color); 
+    font-family: Helvetica, Arial, sans-serif;    
+}
+
+header {
+    padding: 20px 50px;
+    background-color: var(--secondary-color); 
+    
+} 
+
+header .navigation {
+    padding: 20px 0px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.about, main {
+    background-color: white;
+}
+
+/* dropdown hover */
+
+
