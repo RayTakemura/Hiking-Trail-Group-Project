@@ -35,6 +35,28 @@ a {
     background-color: white;
 }
 
-/* dropdown hover */
+/* single trail  */
+.comments{
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
 
+.comment-title{
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+
+.comment-title-text{
+    font-size: 2rem;
+}
+
+/* @media  screen and (min-width: 980px) {
+    .comments{
+        display: flex;
+    }
+
+    .comment-title{
+        justify-content: center;
+    }
+} */
 
