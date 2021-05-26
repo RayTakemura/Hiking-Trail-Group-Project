@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Trail Mix</title>
 </head>
 <body>
@@ -25,14 +25,29 @@
                     <a href="#login">Log-in</a>
                 </div>                
                 <div class='navigation py-3 col-sm-1'>
-                    <a href="#signup" >Sign-up</a>
+                    <a href="#my-trails" >My-Trails</a>
                 </div>        
             </div>
         </div>
     </header>
     <!-- End Header-->
 
-    {{{ body }}}
-    
+  
+    <!-- signup form -->
+
+    <main class='signup d-flex m-5 p-3'>
+        <form class='s-form border m-3 p-5'>
+            <h2>Log-in</h2>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control w-75" id="email" aria-describedby="emailHelp" placeholder="Enter email">            
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control w-75" id="password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </main>
 </body>
 </html>

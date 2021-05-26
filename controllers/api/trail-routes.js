@@ -68,6 +68,10 @@ router.get('/:id', (req, res) => {
       });
 });
 
+// router.post('/:id', (req,res) => {
+
+// })
+
 // PUT /api/trails/favorite
 router.put('/favorite', (req, res) => {
   // make sure the session exists first
