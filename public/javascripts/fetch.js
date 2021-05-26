@@ -49,23 +49,40 @@ function fetchApi() {
     // var myHeaders = new Headers();
     // myHeaders.append("Content-Type", "application/json");
 
+    // fetchUrl = "https://prescriptiontrails.org/api/filter/?by=city&city=Albuquerque&offset=0&count=50";
+
     var requestOptions = {
-      method: 'GET',
-      headers: {
-        "Content-Type": "application/json"
-      },
-    //   redirect: 'follow',
-      mode: 'no-cors'
+        method: 'GET',
+        headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        },
     };
-    
     fetch(fetchUrl, requestOptions)
-    .then(function(response) {
-        // console.log(response.json);
-        return response.json()
-    })
-    .then(function(data) {
-        console.log(data);
-        console.log("fetching trails");
+    .then(response=>response.json()).then(function(data) {
+    // var test = data[0].name;
+    console.log(data);
+    console.log("fetching trails");
+    // console.log(test)
     });
+
+    // var requestOptions = {
+    //   method: 'GET',
+    //   headers: {
+    //     "Content-Type": "application/json"
+    //   },
+    //   redirect: 'follow',
+    //   mode: 'no-cors'
+    // };
+    
+    // fetch(fetchUrl, requestOptions)
+    // .then(function(response) {
+    //     // console.log(response.json);
+    //     return response.json()
+    // })
+    // .then(function(data) {
+    //     console.log(data);
+    //     console.log("fetching trails");
+    // });
 
 };
