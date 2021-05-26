@@ -6,23 +6,21 @@ const sequelize = require('../../config/connection');
 //get all trails
 router.get('/', (req, res) => {
     Trail.findAll({
-      attributes: 
-      [
-        'id', 
-        'trail_name', 
-        'location', 
-        [sequelize.literal('(SELECT COUNT(*) FROM favorite WHERE trail.id = favorite.trail_id)'), 'favorite_count']
-      ],
-      include: [
-        {
-          model: Comment,
-          attributes: ['trail_id','comment_text','user_id', 'created_at','updated_at','id'],
-          include: {
-            model: Vote,
-            attributes: ['comment_id', 'user_id', 'id']
+      attributes: {
+        include: [
+          [sequelize.literal('(SELECT COUNT(*) FROM favorite WHERE trail.id = favorite.trail_id)'), 'favorite_count']
+        ]
+      },
+        include: [
+          {
+            model: Comment,
+            attributes: ['trail_id','comment_text','user_id', 'created_at','updated_at','id'],
+            include: {
+              model: Vote,
+              attributes: ['comment_id', 'user_id', 'id']
+            }
           }
-        }
-      ]
+        ]
     })
       .then(dbTrailData => res.json(dbTrailData))
       .catch(err => {
@@ -37,23 +35,21 @@ router.get('/:id', (req, res) => {
       where: {
         id: req.params.id
       },
-      attributes:
-      [
-        'id', 
-        'trail_name', 
-        'location', 
-        [sequelize.literal('(SELECT COUNT(*) FROM favorite WHERE trail.id = favorite.trail_id)'), 'favorite_count']
-      ],
-      include: [
-        {
-          model: Comment,
-          attributes: ['trail_id','comment_text','user_id', 'created_at','updated_at','id'],
-          include: {
-            model: Vote,
-            attributes: ['comment_id', 'user_id', 'id']
+      attributes: {
+        include: [
+          [sequelize.literal('(SELECT COUNT(*) FROM favorite WHERE trail.id = favorite.trail_id)'), 'favorite_count']
+        ]
+      },
+        include: [
+          {
+            model: Comment,
+            attributes: ['trail_id','comment_text','user_id', 'created_at','updated_at','id'],
+            include: {
+              model: Vote,
+              attributes: ['comment_id', 'user_id', 'id']
+            }
           }
-        }
-      ]
+        ]
     })
       .then(dbTrailData => {
         if (!dbTrailData) {
