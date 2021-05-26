@@ -13,22 +13,108 @@ Trail.init(
             // instruct that this is the Primary Key
             primaryKey: true
         },
-        trail_name: {
+        name: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
-        location: {
+        city: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
+        },
+        zip: {
+            type: DataTypes.INTEGER,
+            allowNull: true
+        },
+        crossstreets: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        address: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        transit: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        lat: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        lng: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        desc: {
+            type: DataTypes.TEXT,
+            allowNull: true
+        },
+        lighting: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        difficulty: {
+            type: DataTypes.INTEGER,
+            allowNull: true
+        },
+        surface: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        parking: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        facilities: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        hours: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        loopcount: {
+            type: DataTypes.INTEGER,
+            allowNull: true
+        },
+        satImgUrl: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        largeImgURL: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        thumbURL: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        published: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        rating: {
+            type: DataTypes.INTEGER,
+            allowNull: true
+        },
+        ratings: {
+            type: DataTypes.INTEGER,
+            allowNull: true
+        },
+        ModifiedTime:{
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        reviews: {
+            type: DataTypes.INTEGER,
+            allowNull: true
+        },
+        url: {
+            type: DataTypes.STRING,
+            allowNull: true
         }
     },
     {
-        indexes: [
-            {
-                unique: true,
-                fields: ['trail_name', 'location']
-            }
-        ],
         sequelize,
         timestamps: false,
         freezeTableName: true,
