@@ -1,0 +1,78 @@
+/* header + home page */
+:root {
+    --primary-color: rgb(196, 196, 196); 
+    --secondary-color:rgb(255, 255, 255);
+    --tertiary-color: rgb(0, 255, 117);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color); 
+    font-family: Helvetica, Arial, sans-serif;    
+}
+
+header {
+    padding: 20px 50px;
+    background-color: var(--secondary-color); 
+    
+} 
+
+header .navigation {
+    padding: 20px 0px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+.about, main{
+    background-color: white;
+}
+
+/* single trail  */
+.comment-section , .card-wrapper{
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+.comment-title, .comment{
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+
+.comment-title-text{
+    font-size: 2rem;
+}
+
+form .s-form{
+    background-color: #fffbf9;
+    border: black;
+    border-radius: 10px;
+}
+
+.signup {
+    background-color: var(--secondary-color);
+}
+
+
+/* @media  screen and (min-width: 980px) {
+    .comments{
+        display: flex;
+    }
+
+    .comment-title{
+        justify-content: center;
+    }
+} */
+
