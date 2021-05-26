@@ -1,6 +1,12 @@
-var searchButton = document.querySelector("#submit");
-searchButton.addEventListener("click", function () {
-    console.log("button clicked!");
+// var searchButton = document.querySelector("#submit");
+// searchButton.addEventListener("click", function (event) {
+//     event.preventDefault();
+//     console.log("button clicked!");
+//     fetchApi();
+// });
+
+document.getElementById("submit").addEventListener("submit", function(e) {
+    e.preventDefault();
     fetchApi();
 });
 
@@ -27,37 +33,39 @@ function fetchApi() {
     console.log(fetchOption + " " + searchWord);
     console.log(fetchUrl);
 
-    fetch(fetchUrl).then(function(response) {
-        console.log("fetch!!!");
-        // request was successful
-        if (response.ok) {
-          response.json().then(function(data) {
-            console.log(data);
-          });
-        }
-        else {
-          alert("There was a problem with your request!");
-        }
-    });
+    // fetch(fetchUrl).then(function(response) {
+    //     console.log("fetch!!!");
+    //     // request was successful
+    //     if (response.ok) {
+    //       response.json().then(function(data) {
+    //         console.log(data);
+    //       });
+    //     }
+    //     else {
+    //       alert("There was a problem with your request!");
+    //     }
+    // });
 
     // var myHeaders = new Headers();
     // myHeaders.append("Content-Type", "application/json");
 
-    // var requestOptions = {
-    //   method: 'GET',
-    //   headers: myHeaders,
-    //   redirect: 'follow'
-    // };
+    var requestOptions = {
+      method: 'GET',
+      headers: {
+        "Content-Type": "application/json"
+      },
+    //   redirect: 'follow',
+      mode: 'no-cors'
+    };
     
-    // return fetch(fetchUrl, requestOptions)
-    // .then(function(response) {
-    //   return response.json();
-    // })
-    // .then(function(data) {
-    //     var test = data[0].name;
-    //     console.log(data);
-    //     console.log("fetching trails");
-    //     console.log(test)
-    // });
+    fetch(fetchUrl, requestOptions)
+    .then(function(response) {
+        // console.log(response.json);
+        return response.json()
+    })
+    .then(function(data) {
+        console.log(data);
+        console.log("fetching trails");
+    });
 
 };
