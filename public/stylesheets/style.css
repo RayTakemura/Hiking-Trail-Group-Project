@@ -40,6 +40,16 @@ ul {
     background-color: white;
 }
 
+.imgbox {
+    display: grid;
+    height: 100%;
+    overflow:hidden;
+}
+.center-fit {
+    max-width: 100%;
+    max-height: 100vh;
+}
+
 /* single trail  */
 .comment-section , .card-wrapper{
     background-color: var(--primary-color);
