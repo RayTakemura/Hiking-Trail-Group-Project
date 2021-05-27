@@ -1,0 +1,33 @@
+    <main class="p-5 m-5">
+        <div class='dropdown d-flex justify-content-center pb-5'>
+            <form action="/action_page.php">
+                <label for="search-type">Search By:</label>
+                <select name="search-type" id="dropdown">
+                        <option disabled>Pick one:</option>
+                        <option id='city' value="city">City</option>
+                        <option id='zip' value="zip">Zip</option>
+                        <option id='name' value="name">Name</option>
+                </select>
+                <br><br>
+            </form>
+
+        </div>
+
+        <div class='d-flex justify-content-center mt-5'>
+            <form  id='submit'>
+                <div class="form-group">
+                    <input type="text" class="form-control " id="input" placeholder="Filter">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous">
+    </script>
+    <script
+        src="/javascripts/fetch.js">
+    </script>
