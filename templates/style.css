@@ -35,8 +35,19 @@ ul {
     list-style-type: none;
 }
 
-.about, main {
+
+.about, main{
     background-color: white;
+}
+
+.imgbox {
+    display: grid;
+    height: 100%;
+    overflow:hidden;
+}
+.center-fit {
+    max-width: 100%;
+    max-height: 100vh;
 }
 
 /* single trail  */
@@ -54,6 +65,15 @@ ul {
     font-size: 2rem;
 }
 
+form .s-form{
+    background-color: #fffbf9;
+    border: black;
+    border-radius: 10px;
+}
+
+.signup {
+    background-color: var(--secondary-color);
+}
 
 
 /* @media  screen and (min-width: 980px) {
