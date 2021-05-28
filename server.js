@@ -33,7 +33,25 @@ const hbs = exphbs.create({});
 hbs.handlebars.registerHelper('splitTitle', function(title) {
   var t = title.split("%20").join(" ");
   var t2 = t.split("%2C").join(" ");
-  return t2;
+  var t3 = t2.split("%28").join("");
+  var t4 = t3.split("%26").join("");
+  var t5 = t4.split("%29").join("");
+  var t6 = t5.split("%21").join("");
+  var t7 = t6.split("%27").join("'");
+  var t8 = t7.split("%C3%B1o ").join(" ");
+  var t9 = t8.split("%2F").join("");
+  var t10 = t9.split("%0D%0A%0D%0A").join("");
+  var t11 = t10.split("%3A").join("");
+  var t12 = t11.split("%27s %3Ca href%3D%22http%").join("");
+  var t13 = t12.split("3A%2F%2F").join(" ");
+  var t14 = t13.split("%2F").join(" ");
+  var t15 = t14.split("%22%3Ewebsite%3C%2Fa%3E").join(" ");
+  var t16 = t15.split("%E2%80%99").join(" ");
+  var t17 = t16.split("%22%3Ewebsite%3Ca%3E").join(" ");
+  var t18 = t17.split("%3Ca href%3D%22").join(" ");
+  
+
+  return t18;
   // [1] + " <br/> " + t[0];
 });
 
