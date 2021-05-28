@@ -29,6 +29,12 @@ const sess = {
  */
 const exphbs = require('express-handlebars');
 const hbs = exphbs.create({});
+hbs.handlebars.registerHelper('splitTitle', function(title) {
+  var t = title.split("%20").join(" ");
+  var t2 = t.split("%2C").join(" ");
+  return t2;
+  // [1] + " <br/> " + t[0];
+});
 
 
 /**
