@@ -64,6 +64,111 @@ router.get('/:id', (req, res) => {
       });
 });
 
+// get all trails by city name
+router.get('/city/:city', (req, res) => {
+  Trail.findAll({
+    where: {
+      city: req.params.city
+    },
+    attributes: {
+      include: [
+        [sequelize.literal('(SELECT COUNT(*) FROM favorite WHERE trail.id = favorite.trail_id)'), 'favorite_count']
+      ]
+    },
+      include: [
+        {
+          model: Comment,
+          attributes: ['trail_id','comment_text','user_id', 'created_at','updated_at','id'],
+          include: {
+            model: Vote,
+            attributes: ['comment_id', 'user_id', 'id']
+          }
+        }
+      ]
+  })
+    .then(dbTrailData => {
+      if (!dbTrailData) {
+        res.status(404).json({ message: 'No trail found with this city name' });
+        return;
+      }
+      res.json(dbTrailData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+// get all trails by zip code
+router.get('/zip/:zip', (req, res) => {
+  Trail.findAll({
+    where: {
+      zip: req.params.zip
+    },
+    attributes: {
+      include: [
+        [sequelize.literal('(SELECT COUNT(*) FROM favorite WHERE trail.id = favorite.trail_id)'), 'favorite_count']
+      ]
+    },
+      include: [
+        {
+          model: Comment,
+          attributes: ['trail_id','comment_text','user_id', 'created_at','updated_at','id'],
+          include: {
+            model: Vote,
+            attributes: ['comment_id', 'user_id', 'id']
+          }
+        }
+      ]
+  })
+    .then(dbTrailData => {
+      if (!dbTrailData) {
+        res.status(404).json({ message: 'No trail found with this zip code' });
+        return;
+      }
+      res.json(dbTrailData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+// get all trails by zip code
+router.get('/name/:name', (req, res) => {
+  Trail.findAll({
+    where: {
+      name: req.params.name
+    },
+    attributes: {
+      include: [
+        [sequelize.literal('(SELECT COUNT(*) FROM favorite WHERE trail.id = favorite.trail_id)'), 'favorite_count']
+      ]
+    },
+      include: [
+        {
+          model: Comment,
+          attributes: ['trail_id','comment_text','user_id', 'created_at','updated_at','id'],
+          include: {
+            model: Vote,
+            attributes: ['comment_id', 'user_id', 'id']
+          }
+        }
+      ]
+  })
+    .then(dbTrailData => {
+      if (!dbTrailData) {
+        res.status(404).json({ message: 'No trail found with this name' });
+        return;
+      }
+      res.json(dbTrailData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 // router.post('/:id', (req,res) => {
 
 // })
