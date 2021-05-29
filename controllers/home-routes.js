@@ -209,5 +209,44 @@ router.get('/trail/name/:name', (req, res) => {
 });
 
 
+// get my-trails
+router.get('/my-trails/', (req, res) => {
+  User.findOne({
+    where: {
+      id: req.session.user_id
+    },
+    attributes: {},
+      include: [
+        {
+          model: Favorite,
+          attributes: {},
+          include: {
+            model: Trail,
+            attributes: {}
+          }
+          
+        }
+      ]
+  })
+    .then(dbTrailData => {
+      if (!dbTrailData) {
+        res.status(404).json({ message: 'No user found' });
+        return;
+      }
+      const fav = dbTrailData.get({ plain: true });
+
+      // pass data to template
+      // res.json(fav.favorites);
+      favorites = fav.favorites;
+      res.render('my-trails', { favorites, loggedIn: req.session.loggedIn}
+      );
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+
 
 module.exports = router;

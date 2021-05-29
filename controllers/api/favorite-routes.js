@@ -70,9 +70,8 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
     // expects {title: 'Taskmaster goes public!', trail_url: 'https://taskmaster.com/press', user_id: 1}
     Favorite.create({
-      title: req.body.title,
-      trail_name: req.body.trail_name,
-      location: req.body.location
+      trail_id: req.body.trail_id,
+      user_id: req.session.user_id
     })
       .then(dbFavoritedata => res.json(dbFavoritedata))
       .catch(err => {
