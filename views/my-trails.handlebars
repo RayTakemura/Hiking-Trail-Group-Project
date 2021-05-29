@@ -1,0 +1,14 @@
+    <main class="p-5 m-5">
+        <h2>My-Trails:</h2>
+
+        <div class='container'>
+            <!-- first row -->
+            <div class='row my-5'>
+                {{> result favorites}}
+            </div>
+        </div>
+    </main>
+
+{{#if loggedIn}}
+<script src="/javascripts/single-trail.js"></script>
+{{/if}}

@@ -1,0 +1,16 @@
+<div class='comment m-3 p-3 d-flex flex-wrap w-75'>
+    {{#each this}}
+    <ul class = "comment-partials">
+        <li>
+            <span>UserName:{{user.username}}</span>
+            <span>{{vote_count}} point </span>
+        </li>
+        <li>
+            <span>{{comment_text}}</span>
+        </li>
+        <li>
+            <span>Commented on: {{createdAt}}</span>
+        </li>
+    </ul>
+    {{/each}}
+</div>

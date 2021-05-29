@@ -1,0 +1,14 @@
+{{#each this}}
+<div class='col-lg-4' id={{ id }} onClick="reply_click(this.id)">
+    <div class="card" style="width: 18rem;" >
+        <img class="card-img-top" src={{thumbURL}} alt="Card image cap">
+        <div class="card-body">
+            <p class="card-text">
+                Name: {{name}} <br>
+                Zip Code: {{zip}}<br>
+                Address: {{address}}<br>
+            </p>
+        </div>
+    </div>
+</div>
+{{/each}}

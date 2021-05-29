@@ -1,0 +1,16 @@
+
+
+{{#each this}}
+<div class='col-lg-4' id={{ trail.id }} onClick="reply_click(this.id)">
+    <div class="card" style="width: 18rem;" >
+        <img class="card-img-top" src={{trail.thumbURL}} alt="Card image cap">
+        <div class="card-body">
+            <p class="card-text">
+                Name: {{trail.name}} <br>
+                Zip Code: {{trail.zip}}<br>
+                Address: {{trail.address}}<br>
+            </p>
+        </div>
+    </div>
+</div>
+{{/each}}
