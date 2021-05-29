@@ -1,8 +1,7 @@
 /**
  * ALL IMPORTS:
  */
-// import translator
-const translate = require("translate");
+
 // import path to use absolute path
 const path = require('path');
 // use the express npm package
