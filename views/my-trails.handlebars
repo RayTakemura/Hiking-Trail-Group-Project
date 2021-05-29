@@ -4,7 +4,11 @@
         <div class='container'>
             <!-- first row -->
             <div class='row my-5'>
-                {{> result-info results }}
+                {{> result favorites}}
             </div>
         </div>
     </main>
+
+{{#if loggedIn}}
+<script src="/javascripts/single-trail.js"></script>
+{{/if}}
