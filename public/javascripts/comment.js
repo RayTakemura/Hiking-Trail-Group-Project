@@ -1,5 +1,5 @@
 // import translator
-const translate = require("translate");
+
 
 async function commentFormHandler(event) {
     event.preventDefault();
