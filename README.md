@@ -20,7 +20,9 @@
   This project is used to find your favorite hiking trail in New Mexico and connect with others! Search the trail that you like, and leave comments!
 
   ## Credits
-  hellokedakai https://github.com/hellokedakai RayTakemura https://github.com/RayTakemura Raghav Ramanan https://github.com/PrinceAdelXX
+  * hellokedakai https://github.com/hellokedakai 
+  * RayTakemura https://github.com/RayTakemura 
+  * Raghav Ramanan https://github.com/PrinceAdelXX
 
   ## Contribute
   Email me: raytakemura@gmail.com
@@ -32,7 +34,12 @@
   This app will allow users to signup, login, and logout. 
 
   ## Questions
-  Ask questions at https://github.com/hellokedakai https://github.com/RayTakemura https://github.com/PrinceAdelXX and raytakemura@gmail.com
   
+  Ask questions at 
+  * https://github.com/hellokedakai 
+  * https://github.com/RayTakemura raytakemura@gmail.com
+  * https://github.com/PrinceAdelXX 
+  
+       
   
   
