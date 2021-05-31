@@ -2,7 +2,7 @@
 :root {
     --primary-color: rgb(196, 196, 196); 
     --secondary-color:rgb(255, 255, 255);
-    --tertiary-color: rgb(0, 255, 117);
+    --tertiary-color: #00ff75;
 }
 
 * {
@@ -18,7 +18,7 @@ body {
 
 header {
     padding: 20px 50px;
-    background-color: var(--secondary-color); 
+    background-color: #317873
     
 } 
 
@@ -34,6 +34,7 @@ a {
 ul {
     list-style-type: none;
 }
+
 
 
 .about, main{

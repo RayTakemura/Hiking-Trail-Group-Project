@@ -34,11 +34,12 @@
   This app will allow users to signup, login, and logout. 
 
   ## Questions
+  
   Ask questions at 
   * https://github.com/hellokedakai 
   * https://github.com/RayTakemura raytakemura@gmail.com
   * https://github.com/PrinceAdelXX 
   
-        
+       
   
   

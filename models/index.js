@@ -21,7 +21,7 @@ User.hasMany(Favorite,{
 
 Favorite.belongsTo(User, {
     foreignKey: 'user_id'
-})
+});
 
 Trail.belongsToMany(User, {
     through: Favorite,
@@ -44,7 +44,7 @@ Trail.hasMany(Comment, {
 
 Comment.belongsTo(Trail, {
     foreignKey: 'trail_id'
-})
+});
 
 User.hasMany(Comment, {
     foreignKey: 'user_id'
