@@ -1,10 +1,37 @@
 <main class="p-5 m-5">
-    <h2>Trails in {{city}}{{zip}}{{name}}</h2>
+    {{#unless trail}}
+    
+    {{/unless}}
+    {{#if city}}
+    <h2>Trails in {{city}}</h2>
+    {{else}}
+        {{#if zip}}
+        <h2>Trails in {{zip}}</h2>
+        {{else}}
+            {{#if name}}
+            <h2>Trails in {{zip}}</h2>
+            {{else}}
+            <h2>404 not found </h2>
+            {{/if}}
+        {{/if}}
+    {{/if}}
+
 
     <div class='container'>
         <!-- first row -->
         <div class='row my-5'>
+            {{#if city}}
             {{> result-from-search trail}}
+            {{else}}
+                {{#if name}}
+                {{> result-from-search trail}}
+                {{else}}
+                    {{#if zip}}
+                    {{> result-from-search trail}}
+                    {{/if}}
+                {{/if}}
+            {{/if}}
+            
         </div>
     </div>
 </main>
